@@ -1,0 +1,15 @@
+version: 2.1
+
+jobs:
+  config-test:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          command: "echo CONFIG TEST SUCCESS"
+
+workflows:
+  config-test-workflow:
+    jobs:
+      - config-test
